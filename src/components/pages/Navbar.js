@@ -7,13 +7,13 @@ const Navbar = () => {
     const navigate = useNavigate();
 
     const userName = JSON.parse(localStorage.getItem('user'));
-
+    
     const handleLogout = (e) => {
         e.preventDefault();
         localStorage.removeItem('loggedin');
-        navigate('/login');
+        navigate('/');
     }
-  
+
     return (
         <div>
             <div className="container mt-5">
@@ -26,18 +26,17 @@ const Navbar = () => {
                     <div className="collapse navbar-collapse justify-content-end" id="navbarNavAltMarkup">
 
                         <div className="navbar-nav" style={{ paddingLeft: '25px' }}>
-                            <Link to='/home' className='nav-link nav-item menu_activ'  >Home</Link>
-
+                            <Link to='/home' className='nav-link nav-item menu_activ'>Home</Link>
 
 
                             <div className="dropdown" style={{ paddingRight: '40px' }}>
                                 <button className="dropbtn nav-item nav-link menu_activ">
-                                    <i class="fa fa-user-circle" aria-hidden="true"></i>
-                                    &nbsp; {userName.name}
+                                    <i className="fa fa-user-circle" aria-hidden="true"></i>
+                                    &nbsp; {userName.fname}
                                 </button>
                                 <div className="dropdown-content">
                                     <Link to="#" onClick={handleLogout} >
-                                        <i class="fa fa-sign-out" aria-hidden="true"></i>
+                                        <i className="fa fa-sign-out" aria-hidden="true"></i>
                                         &nbsp;Logout
                                     </Link>
                                     {/* <button className='btn btn-primary my-2 mx-auto d-flex justify-content-center'
@@ -53,7 +52,8 @@ const Navbar = () => {
                 </nav>
                 <div className="contain-div mt-5  ">
                     <h5 className='text-center text-capitalize'>
-                        welcome to {userName.name}  </h5>
+                    welcome to {userName.fname}
+                    </h5>
                     <hr className='w-25 mx-auto' />
                 </div>
                 <div className="data mt-5">

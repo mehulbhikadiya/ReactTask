@@ -35,13 +35,13 @@ const Login = () => {
         textDecoration: 'none',
     }
 
-    const passIcone = {
-        textAlign: 'end',
-        alignItem: 'center',
-        marginRight: '20px',
-        marginTop: '-31px',
-        cursor: 'pointer'
-    }
+    // const passIcone = {
+    //     textAlign: 'end',
+    //     alignItem: 'center',
+    //     marginRight: '20px',
+    //     marginTop: '-31px',
+    //     cursor: 'pointer'
+    // }
 
     const ForgotPass = {
         textAlign: 'end',
@@ -91,7 +91,7 @@ const Login = () => {
                         <p></p>
 
                         <button className='btn btn-primary w-100 mt-4'> Sign in</button>
-                        <span style={singIcone} ><i class="fa fa-arrow-right" aria-hidden="true" /> </span>
+                        <span style={singIcone} ><i className="fa fa-arrow-right" aria-hidden="true" /> </span>
                         <br />
                         <p></p>
 
@@ -103,5 +103,5 @@ const Login = () => {
     )
 }
 
-export default Login
+export default Login;
 

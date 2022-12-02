@@ -1,8 +1,8 @@
-body{
+body {
   margin: 0%;
   padding: 0%;
   box-sizing: border-box;
-  background-image: linear-gradient(to right, rgba(255,87,143), rgb(254,151,128),rgba(254,197,134),rgba(255, 250, 243));
+  background-image: linear-gradient(to right, rgba(255, 87, 143), rgb(254, 151, 128), rgba(254, 197, 134), rgba(255, 250, 243));
 }
 
 
@@ -125,17 +125,17 @@ body{
 }
 
 /* Register form Styel */
+
 .register-form-style {
-  /* border: 1px solid; */
-  padding: 50px;
+  /* border: 1px solid #000; */
   border-radius: 20px;
+  padding: 50px;
   background-color: #fff;
 }
 
-.Login-form-style{
+.Login-form-style {
   padding: 45px;
   border-radius: 20px;
-  background-color: #fff; 
+  background-color: #fff;
 }
-
 

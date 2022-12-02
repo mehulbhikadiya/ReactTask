@@ -3,10 +3,6 @@ import React, { useState } from 'react'
 import { NavLink } from 'react-router-dom'
 import { useNavigate } from 'react-router-dom';
 
-import { Icon } from 'react-icons-kit';
-import { eye } from 'react-icons-kit/feather/eye';
-import { eyeOff } from 'react-icons-kit/feather/eyeOff';
-
 const Register = () => {
 
     const navigate = useNavigate();
@@ -23,7 +19,7 @@ const Register = () => {
     const handleSubmit = (e) => {
         e.preventDefault();
         localStorage.setItem('user', JSON.stringify(input));
-        navigate('/login');
+        navigate('/');
     }
 
     const signIn = {
@@ -34,13 +30,13 @@ const Register = () => {
         textDecoration: 'none',
     }
 
-    const passIcone = {
-        textAlign: 'end',
-        alignItem: 'center',
-        marginRight: '20px',
-        marginTop: '-31px',
-        cursor: 'pointer'
-    }
+    // const passIcone = {
+    //     textAlign: 'end',
+    //     alignItem: 'center',
+    //     marginRight: '20px',
+    //     marginTop: '-31px',
+    //     cursor: 'pointer'
+    // }
 
     const singIcone = {
         display: 'flex',
@@ -56,7 +52,7 @@ const Register = () => {
                 <div className="main_div">
                     <form action="" className='w-50 mx-auto mt-4 register-form-style' onSubmit={handleSubmit}>
                     <h3 className='text-center text-capitalize'>Create account</h3>
-                    <NavLink to='/login' className=' text-dark' style={signIn}>Alredy have an account? <span className='text-primary'> &nbsp; Sign in</span> </NavLink>
+                    <NavLink to='/' className=' text-dark' style={signIn}>Alredy have an account? <span className='text-primary'> &nbsp; Sign in</span> </NavLink>
 
                         <div className="row mt-4">
                             <div className="col-md-6">
@@ -119,7 +115,7 @@ const Register = () => {
                         </div>
                         <p></p>
                         <button className='btn btn-primary w-100 mt-3' >Sign up </button>
-                        <span style={singIcone} ><i class="fa fa-arrow-right" aria-hidden="true" /> </span>
+                        <span style={singIcone} ><i className="fa fa-arrow-right" aria-hidden="true" /> </span>
                         <br />
                         <input type="checkbox" name="terms" id="terms" className='text-capitalize'/> I have read and agree to the <span className='text-primary'> Terms of Service</span> 
                     </form>
